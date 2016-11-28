@@ -1,6 +1,6 @@
 package code;
 
-public class Animal {
+abstract public class Animal {
 	private int size;
 	String breed;
 	String name;
@@ -9,9 +9,7 @@ public class Animal {
 		
 	}
 	
-	public void makeNoise(){
-		System.out.println("Animaaaul!");
-	}
+	public abstract void makeNoise();
 	
 	public void setSize(int s){
 		size = s;

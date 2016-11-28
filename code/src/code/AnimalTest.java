@@ -5,7 +5,7 @@ public class AnimalTest {
 	public static void main(String[] args) {
 		AnimalPack animals = new AnimalPack();
 		animals.makeArray();
-		
+			
 		for (int i=0;i<5;i++){
 			if (Math.random() < 0.5){
 				Dog d = new Dog();

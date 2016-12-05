@@ -1,6 +1,6 @@
 package code;
 
-public class Dog extends Animal{
+public class Dog extends Animal implements Fetcher{
 	
 	String name = "Dog";
 	
@@ -14,5 +14,9 @@ public class Dog extends Animal{
 	
 	public String getName(){
 		return name;
+	}
+	
+	public String fetch(String s){
+		return "damp " + s;
 	}
 }

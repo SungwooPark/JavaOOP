@@ -3,26 +3,11 @@ package code;
 public class AnimalTest {
 
 	public static void main(String[] args) {
-		AnimalPack animals = new AnimalPack();
-		animals.makeArray();
-			
-		for (int i=0;i<5;i++){
-			if (Math.random() < 0.5){
-				Dog d = new Dog();
-				d.setSize(i);
-				animals.addAnimal(i, d);
-			}else{
-				Cat c = new Cat();
-				c.setSize(i);
-				animals.addAnimal(i, c);
-			}
-		}
+		Fetcher f= new Dog();
+		System.out.println(f.fetch("tennis ball"));
 		
-		for (int i=0;i<animals.getSize();i++){
-			animals.getAnimal(i).makeNoise();
-		}
-
-		System.out.println(animals.biggestAnimal().getName());
+		//fetch method is undefined for Cat class
+		//Cat c = new Cat();
+		//System.out.pritnln(c.fetch("tennis ball"));
 	}
-
 }

@@ -1,9 +1,23 @@
 package code;
 
 abstract public class Animal {
-	private int size;
+	int size;
 	String breed;
 	String name;
+	
+	public Animal() {
+		System.out.println("Running no-arg Animal constructor");
+		size = 10;
+		breed = "Generic Animal";
+		name = "Annie";
+	}
+	
+	public Animal(int size, String breed, String name){
+		System.out.println("Running animal constructor");
+		this.size = size;
+		this.breed = breed;
+		this.name = name;
+	}
 	
 	public void bark() {
 		

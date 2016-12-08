@@ -3,7 +3,30 @@ package code;
 import java.util.ArrayList;
 
 public class AnimalPack {
-private ArrayList<Animal> animals;
+	private ArrayList<Animal> animals;
+	
+	/**
+	 * Call makeArray function to initialize the animals instance variable
+	 */
+	public AnimalPack(){
+		makeArray();
+	}
+	
+	public double geoMean(){
+		int product = 1;
+		for (int i=0;i<animals.size();i++){
+			product = product * animals.get(i).getSize();
+		}
+		return Math.pow(product, 1.0/(animals.size()));
+	}
+	
+	public static double geoMean(AnimalPack a){
+		int product = 1;
+		for (int i=0;i<a.getSize();i++){
+			product = product * a.getAnimal(i).getSize();
+		}
+		return Math.pow(product, 1.0/(a.getSize()));
+	}
 	
 	/**
 	 * Initialize dogs variable to be an ArrayList of Dog instances.
